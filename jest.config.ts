@@ -7,6 +7,7 @@ export default {
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/**/*.d.ts(x)?',
+    '!src/**/*.stories.tsx',
     '!src/mocks/**/*.ts(x)?',
     '!src/pages/**/*.tsx',
     '!src/styles/**/*.ts',
