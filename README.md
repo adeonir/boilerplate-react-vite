@@ -80,7 +80,6 @@ yarn preview
 - `generate`: runs plop to generate component files
 - `storybook`: runs storybook on `localhost:6006`
 - `storybook:build`: create the build version of storybook
-- `generate`: runs plop to generate component files
 
 ---
 
