@@ -10,6 +10,8 @@
     "test:watch": "jest --maxWorkers=50% --watch",
     "lint": "eslint src --ext ts,tsx --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
     "prepare": "husky install"
   },
   "husky": {
@@ -25,6 +27,13 @@
     ]
   },
   "dependencies": {
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-vite": "^0.1.29",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.1.1",
     "@testing-library/user-event": "14.1.1",
