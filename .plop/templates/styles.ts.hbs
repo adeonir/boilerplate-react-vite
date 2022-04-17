@@ -1,0 +1,9 @@
+import styled, { css } from 'styled-components'
+
+import type { {{pascalCase name}}Props } from './types'
+
+export const Box = styled.div<{{pascalCase name}}Props>`
+  ${({ theme }) => css`
+    padding: ${theme.spacing[4]};
+  `}
+`

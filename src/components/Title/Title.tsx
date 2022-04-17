@@ -1,7 +1,4 @@
 import * as S from './Title.styles'
-
-export type TitleProps = {
-  children: string
-}
+import type { TitleProps } from './types'
 
 export const Title = ({ children }: TitleProps) => <S.Title>{children}</S.Title>

@@ -1,0 +1,10 @@
+import * as S from './{{pascalCase name}}.styles'
+import type { {{pascalCase name}}Props } from './types'
+
+export function {{pascalCase name}}({ prop = '{{pascalCase name}}' }: {{pascalCase name}}Props) {
+  return (
+    <S.Box>
+      <h1>{prop}</h1>
+    </S.Box>
+  )
+}
