@@ -51,7 +51,9 @@ export const GlobalStyle = createGlobalStyle`
       color: inherit;
     }
 
-    ul {
+    ul,
+    li,
+    ol {
       list-style: none;
     }
   `};
