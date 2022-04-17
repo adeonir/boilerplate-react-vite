@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '~/utils/tests'
 
-import App from './App'
+import { App } from './App'
 
 describe('App', () => {
   it('renders', () => {
