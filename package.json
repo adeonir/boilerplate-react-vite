@@ -5,12 +5,37 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --max-warnings=0",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "app/**/*.{ts,tsx}": [
+      "yarn tsc --project tsconfig.json --noEmit",
+      "yarn eslint --fix",
+      "yarn prettier --write"
+    ]
   },
   "dependencies": {
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "@vitejs/plugin-react": "1.3.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.8",
+    "prettier": "2.6.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "typescript": "4.6.3",
