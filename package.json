@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "app/**/*.{ts,tsx}": [
-      "yarn tsc --project tsconfig.json --noEmit",
+      "yarn tsc --project tsconfig.json --pretty --noEmit",
       "yarn eslint --fix",
       "yarn prettier --write"
     ]
