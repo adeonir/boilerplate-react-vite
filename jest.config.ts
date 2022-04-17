@@ -1,16 +1,14 @@
-const assetsKey =
-  '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$'
-
 export default {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
+    '!src/main.tsx',
     '!src/**/*.d.ts(x)?',
     '!src/**/*.stories.tsx',
+    '!src/**/types.ts',
     '!src/styles/**/*.ts',
     '!src/types/**/*.ts',
-    '!src/main.tsx',
   ],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/', 'src/utils'],
@@ -20,8 +18,8 @@ export default {
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   moduleNameMapper: {
     '~/(.*)': '<rootDir>/src/$1',
-    '\\.svg$': '<rootDir>/src/utils/svg.ts',
-    [assetsKey]: 'ts-jest',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/utils/mocks/filea.js',
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },
   roots: ['<rootDir>'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
@@ -29,7 +27,5 @@ export default {
   testPathIgnorePatterns: ['/node_modules/'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-    '\\.svg$': 'ts-jest',
-    [assetsKey]: 'ts-jest',
   },
 }
