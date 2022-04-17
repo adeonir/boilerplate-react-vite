@@ -11,6 +11,7 @@ export default {
     '!src/pages/**/*.tsx',
     '!src/styles/**/*.ts',
     '!src/types/**/*.ts',
+    '!src/main.tsx',
   ],
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: ['/node_modules/', 'src/mocks'],
