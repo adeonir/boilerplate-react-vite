@@ -1,7 +1,22 @@
 {
   "name": "boilerplate-react-vite",
-  "private": true,
+  "description": "A React boilerplate powered by Vite builder",
   "version": "1.0.0",
+  "author": "Adeonir Kohl",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeonir/boilerplate-react-vite.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "react",
+    "vite",
+    "styled-components",
+    "react-router",
+    "storybook",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,7 +26,7 @@
     "test:ci": "jest --runInBand",
     "lint": "eslint src --ext ts,tsx --max-warnings=0",
     "format": "prettier src",
-    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "typecheck": "tsc",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "generate": "plop",
@@ -24,7 +39,7 @@
   },
   "lint-staged": {
     "app/**/*.{ts,tsx}": [
-      "yarn tsc --project tsconfig.json --pretty --noEmit",
+      "yarn tsc",
       "yarn eslint --fix",
       "yarn prettier --write"
     ]
