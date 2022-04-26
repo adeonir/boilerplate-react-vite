@@ -51,32 +51,32 @@
         "pathGroups": [
           {
             "pattern": "react",
-            "group": "builtin",
+            "group": "external",
             "position": "before"
           },
           {
-            "pattern": "~/constants",
-            "group": "external",
+            "pattern": "~/constants/*",
+            "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "~/api",
-            "group": "external",
+            "pattern": "~/layouts/*",
+            "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "~/utils/**",
-            "group": "external",
+            "pattern": "~/pages/*",
+            "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "~/layouts/**",
-            "group": "external",
+            "pattern": "~/components/*",
+            "group": "internal",
             "position": "after"
           },
           {
-            "pattern": "~/components/**",
-            "group": "external",
+            "pattern": "~/utils/*",
+            "group": "internal",
             "position": "after"
           }
         ],
@@ -85,10 +85,10 @@
           "builtin",
           "external",
           "internal",
-          "parent",
-          "sibling",
+          ["parent", "sibling"],
           "index",
-          "object"
+          "object",
+          "type"
         ],
         "alphabetize": {
           "order": "asc"
