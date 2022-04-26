@@ -55,6 +55,11 @@
             "position": "before"
           },
           {
+            "pattern": "~/routes/*",
+            "group": "internal",
+            "position": "after"
+          },
+          {
             "pattern": "~/constants/*",
             "group": "internal",
             "position": "after"
