@@ -1,5 +1,5 @@
-<p align="center">
-  <img src=".github/assets/hero-illustration.svg" atl="A developer siting in front of a computer" />
+<p style="text-align: center">
+  <img src=".github/assets/hero-illustration.svg" alt="A developer siting in front of a computer" />
 </p>
 
 # Boilerplate: Vite + React
@@ -76,7 +76,7 @@ yarn preview
 - `test:watch`: runs jest in watch mode
 - `lint`: runs the linter in all components and pages
 - `format`: runs prettier to format all components and pages
-- `typecheck`: runs the typechecker in all components and pages
+- `typecheck`: runs the type checker in all components and pages
 - `generate`: runs plop to generate component files
 - `storybook`: runs storybook on `localhost:6006`
 - `storybook:build`: create the build version of storybook
