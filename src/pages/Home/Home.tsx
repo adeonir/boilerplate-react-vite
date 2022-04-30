@@ -5,9 +5,9 @@ import * as S from './Home.styles'
 export function Home() {
   return (
     <S.Page>
-      <Heading align="center">Home</Heading>
+      <Heading align="center">Home Page</Heading>
       <Heading as="h2" align="center">
-        This is the home page
+        This is the home page description
       </Heading>
 
       <S.Container>

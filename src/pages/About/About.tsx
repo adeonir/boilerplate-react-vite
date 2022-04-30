@@ -5,9 +5,9 @@ import * as S from './About.styles'
 export function About() {
   return (
     <S.Page>
-      <Heading align="center">About</Heading>
+      <Heading align="center">About Page</Heading>
       <Heading as="h2" align="center">
-        This is the about page
+        This is the about page description
       </Heading>
 
       <S.Container>
