@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
-import { TitleProps } from '~/components/Title/types'
+import { HeadingProps } from './types'
 
 const modifiers = {
   left: css`
@@ -15,14 +14,9 @@ const modifiers = {
   `,
 }
 
-export const Title = styled.h1<TitleProps>`
+export const Heading = styled.h1<HeadingProps>`
   ${({ theme, align }) => css`
-    font-size: 4.8rem;
     color: ${theme.colors.slate[800]};
-
-    ${media.greaterThan('medium')`
-      font-size: 5.6rem;
-    `}
 
     ${align && modifiers[align]}
   `}
