@@ -1,11 +1,14 @@
-import { Title } from '~/components/Title'
+import { Heading } from '~/components/Heading'
 
 import * as S from './About.styles'
 
 export function About() {
   return (
     <S.Page>
-      <Title align="center">About</Title>
+      <Heading align="center">About</Heading>
+      <Heading as="h2" align="center">
+        This is the about page
+      </Heading>
 
       <S.Container>
         <p>
