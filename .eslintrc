@@ -23,7 +23,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "import", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import",
+    "@typescript-eslint"
+  ],
   "rules": {
     "no-undef": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -48,52 +53,86 @@
       "error",
       {
         "newlines-between": "always",
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "~/routes/*",
-            "group": "internal",
-            "position": "after"
-          },
-          {
-            "pattern": "~/constants/*",
-            "group": "internal",
-            "position": "after"
-          },
-          {
-            "pattern": "~/layouts/*",
-            "group": "internal",
-            "position": "after"
-          },
-          {
-            "pattern": "~/pages/*",
-            "group": "internal",
-            "position": "after"
-          },
-          {
-            "pattern": "~/components/*",
-            "group": "internal",
-            "position": "after"
-          },
-          {
-            "pattern": "~/utils/*",
-            "group": "internal",
-            "position": "after"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["builtin"],
         "groups": [
           "builtin",
           "external",
           "internal",
-          ["parent", "sibling"],
+          [
+            "parent",
+            "sibling"
+          ],
           "index",
           "object",
           "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "external"
+          },
+          {
+            "pattern": "~/constants/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/utils/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/routes/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/layouts/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/pages/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/components/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          },
+          {
+            "pattern": "~/styles/**",
+            "patternOptions": {
+              "partial": true,
+              "nocomment": true
+            },
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
         ],
         "alphabetize": {
           "order": "asc"
@@ -109,7 +148,11 @@
   },
   "overrides": [
     {
-      "files": ["src/pages/*", "src/styles/*", "src/**/*.stories.tsx"],
+      "files": [
+        "src/pages/*",
+        "src/styles/*",
+        "src/**/*.stories.tsx"
+      ],
       "rules": {
         "import/no-default-export": "off"
       }
