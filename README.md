@@ -1,6 +1,6 @@
-<p style="text-align: center">
+<center>
   <img src=".github/assets/hero-illustration.svg" alt="A developer siting in front of a computer" />
-</p>
+</center>
 
 # Boilerplate: Vite + React
 
@@ -12,7 +12,8 @@ This is a [React](https://reactjs.org/) boilerplate using [Vite Builder](https:/
 
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [React-Router](https://reactrouter.com/)
+- [TypeScript](https://typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
 - [Jest](https://jestjs.io/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
@@ -74,12 +75,13 @@ yarn preview
 - `preview`: starts a simple server with the build production code
 - `test`: runs jest to test all components and pages
 - `test:watch`: runs jest in watch mode
+- `test:ci`: runs jest to test all components and pages in CI
 - `lint`: runs the linter in all components and pages
 - `format`: runs prettier to format all components and pages
 - `typecheck`: runs the type checker in all components and pages
-- `generate`: runs plop to generate component files
 - `storybook`: runs storybook on `localhost:6006`
 - `storybook:build`: create the build version of storybook
+- `generate`: runs plop to generate component files
 
 ---
 
