@@ -1,6 +1,6 @@
-<center>
+<p align="center">
   <img src=".github/assets/hero-illustration.svg" alt="A developer siting in front of a computer" />
-</center>
+</p>
 
 # Boilerplate: Vite + React
 
