@@ -1,4 +1,6 @@
-const path = require('path')
+const { resolve } = require('path')
+
+const { loadConfigFromFile, mergeConfig } = require('vite')
 
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
@@ -11,8 +13,14 @@ module.exports = {
   core: {
     builder: '@storybook/builder-vite',
   },
-  webpackFinal: (config) => {
-    config.resolve.alias['~'] = path.resolve(__dirname, '../src')
-    return config
+  viteFinal: async (config, { configType }) => {
+    const { config: userConfig } = await loadConfigFromFile(
+      resolve(__dirname, '../.vite.config.js')
+    )
+
+    return mergeConfig(config, {
+      ...userConfig,
+      plugins: [],
+    })
   },
 }
