@@ -15,7 +15,7 @@ This is a [React](https://reactjs.org/) boilerplate using [Vite Builder](https:/
 - [React-Router](https://reactrouter.com/)
 - [TypeScript](https://typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
+- [Vitest](https://vitest.dev/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [Storybook](https://storybook.js.org/)
 - [Eslint](https://eslint.org/)
@@ -73,9 +73,10 @@ yarn preview
 - `dev`: runs your application on `localhost:3000`
 - `build`: creates the production build version
 - `preview`: starts a simple server with the build production code
-- `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
-- `test:ci`: runs jest to test all components and pages in CI
+- `test`: runs vitest in watch mode
+- `test:ui`: runs vitest enabling UI
+- `test:coverage`: runs vitest returning coverage table
+- `test:ci`: runs vitest once in CI
 - `lint`: runs the linter in all components and pages
 - `format`: runs prettier to format all components and pages
 - `typecheck`: runs the type checker in all components and pages
