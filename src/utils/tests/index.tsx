@@ -1,15 +1,23 @@
-/* eslint-disable import/export */
-
-import { RenderOptions, RenderResult, render } from '@testing-library/react'
+import {
+  RenderOptions,
+  RenderResult,
+  cleanup,
+  render,
+} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { afterEach } from 'vitest'
 
 import { theme } from '~/styles'
 
+afterEach(() => {
+  cleanup()
+})
+
 const customRender = (
   ui: ReactElement,
-  options?: RenderOptions
+  options: RenderOptions = {}
 ): RenderResult =>
   render(ui, {
     wrapper: ({ children }) => (
