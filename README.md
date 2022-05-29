@@ -32,15 +32,11 @@ Make a copy:
 npx degit adeonir/boilerplate-react-vite my-project
 ```
 
-Install the dependencies:
+Enter the new created folder, initiate a git repository and install the dependencies:
 
 ```
 cd my-project
-```
-
-And then:
-
-```
+git init
 yarn install
 ```
 
