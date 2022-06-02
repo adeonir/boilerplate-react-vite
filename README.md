@@ -70,7 +70,6 @@ yarn preview
 - `build`: creates the production build version
 - `preview`: starts a simple server with the build production code
 - `test`: runs vitest in watch mode
-- `test:ui`: runs vitest enabling UI
 - `test:coverage`: runs vitest returning coverage table
 - `test:ci`: runs vitest once in CI
 - `lint`: runs the linter in all components and pages
