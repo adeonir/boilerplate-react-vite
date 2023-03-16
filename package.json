@@ -1,7 +1,7 @@
 {
   "name": "boilerplate-react-vite",
   "description": "A React boilerplate powered by Vite builder",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "Adeonir Kohl",
   "license": "MIT",
   "repository": {
