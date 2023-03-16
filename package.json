@@ -27,8 +27,6 @@
     "test:ci": "vitest --run",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "format": "prettier src",
-    "format:fix": "prettier src --write",
     "typecheck": "tsc",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
