@@ -1,9 +1,4 @@
-import {
-  RenderOptions,
-  RenderResult,
-  cleanup,
-  render,
-} from '@testing-library/react'
+import { RenderOptions, RenderResult, cleanup, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
@@ -15,14 +10,9 @@ afterEach(() => {
   cleanup()
 })
 
-const customRender = (
-  ui: ReactElement,
-  options: RenderOptions = {}
-): RenderResult =>
+const customRender = (ui: ReactElement, options: RenderOptions = {}): RenderResult =>
   render(ui, {
-    wrapper: ({ children }) => (
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    ),
+    wrapper: ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>,
     ...options,
   })
 
