@@ -9,15 +9,17 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
+  },
+  docs: {
+    autodocs: true
   },
   viteFinal: async (config, { configType }) => {
     const { config: userConfig } = await loadConfigFromFile(
       resolve(__dirname, '../.vite.config.js')
     )
-
     return mergeConfig(config, {
       ...userConfig,
       plugins: [],
