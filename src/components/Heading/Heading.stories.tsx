@@ -1,20 +1,23 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import { Heading } from './Heading'
 
-export default {
+const meta = {
   title: 'Heading',
   component: Heading,
-  argTypes: {
-    align: {
-      defaultValue: 'left',
-    },
-    as: {
-      defaultValue: 'h1',
-    },
+  parameters: {
+    layout: 'centered',
   },
-} as ComponentMeta<typeof Heading>
+  tags: ['autodocs'],
+} satisfies Meta<typeof Heading>
 
-const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args}>Heading</Heading>
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Primary = Template.bind({})
+export const Default: Story = {
+  args: {
+    children: 'Heading',
+    align: 'left',
+    as: 'h1',
+  },
+}
